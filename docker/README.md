@@ -20,5 +20,6 @@ docker run --rm -ti \
     -v $HOME/.restic/passfile:/pass \
     -v $HOME/importantdirectory:/data \
     -e RESTIC_REPOSITORY=rest:https://user:pass@hostname/ \
+    -e TZ=Europe/Berlin \
     restic/restic -p /pass backup /data
 ```
